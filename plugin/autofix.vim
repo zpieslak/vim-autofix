@@ -12,7 +12,7 @@ augroup autofix " {{{1
   autocmd FileType ruby
     \ let b:autofix_command = '!rubocop -a %'
   autocmd FileType javascript
-    \ let b:autofix_command = '!eslint --fix %'
+    \ let b:autofix_command = '!npx eslint --fix %'
 augroup END " }}}1
 
 function! Autofix()
