@@ -11,8 +11,10 @@ augroup autofix " {{{1
   autocmd!
   autocmd FileType ruby
     \ let b:autofix_command = '!rubocop -a %'
-  autocmd FileType javascript
+  autocmd FileType javascript,typescriptreact
     \ let b:autofix_command = '!npx eslint --fix %'
+  autocmd FileType python
+    \ let b:autofix_command = '!autopep8 --in-place %'
 augroup END " }}}1
 
 function! Autofix()
